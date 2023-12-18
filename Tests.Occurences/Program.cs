@@ -3,6 +3,13 @@
 using System.Diagnostics.Tracing;
 using System.Globalization;
 
+string phrase = "he Was he wAs she waS";
+
+StringSplitOptions options = new(){
+    StringSplitOptions.RemoveEmptyEntries
+};
+string[] wordsArr = phrase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
 string[] words = new string[]
 {
     "he",
@@ -12,6 +19,7 @@ string[] words = new string[]
     "he",
     "wAs"
 };
+
 
 // 1. With dictionary
 Dictionary<string, int> occurences = new();
