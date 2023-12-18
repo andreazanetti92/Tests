@@ -5,10 +5,7 @@ using System.Globalization;
 
 string phrase = "he Was he wAs she waS";
 
-StringSplitOptions options = new(){
-    StringSplitOptions.RemoveEmptyEntries
-};
-string[] wordsArr = phrase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+string[] wordsArr = phrase.Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 
 string[] words = new string[]
 {
